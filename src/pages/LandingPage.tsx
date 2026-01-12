@@ -49,8 +49,8 @@ export const LandingPage = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-            Command your <br />
-            fleet with precision.
+            Keeping your <br />
+            journeys simple.
           </h1>
           
           <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
