@@ -2,6 +2,7 @@
 create table if not exists public.owners (
   id uuid primary key references auth.users(id) on delete cascade,
   full_name text,
+  email text,
   phone text,
   company_name text,
   role text default 'owner',
