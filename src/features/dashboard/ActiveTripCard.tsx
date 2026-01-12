@@ -68,39 +68,39 @@ export const ActiveTripCard = () => {
              <Card className="relative w-full h-full max-w-none border border-slate-200 bg-white text-slate-900 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
                 <div className="flex flex-col md:flex-row h-full">
                     {/* Left Side: Form */}
-                    <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
-                        <div className="flex items-center gap-3 mb-6">
+                    <div className="flex-1 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                        <div className="flex items-center gap-3 mb-5 sm:mb-6">
                             <div className="h-10 w-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
                                 <Sparkles className="h-5 w-5 text-blue-600" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-slate-900">New Journey</h3>
-                                <p className="text-sm text-slate-500">Schedule your next trip</p>
+                                <h3 className="text-lg sm:text-xl font-bold text-slate-900">New Journey</h3>
+                                <p className="text-xs sm:text-sm text-slate-500">Schedule your next trip</p>
                             </div>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div className="space-y-1.5">
-                                    <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Origin</label>
+                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                            <div className="grid grid-cols-2 gap-3 sm:gap-5">
+                                <div className="space-y-1 sm:space-y-1.5 col-span-2 sm:col-span-1">
+                                    <label className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Origin</label>
                                     <div className="relative group/input">
-                                        <MapPin className="absolute left-3 top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
+                                        <MapPin className="absolute left-3 top-2.5 sm:top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
                                         <Input 
                                         placeholder="From Location" 
-                                        className="pl-10 h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl" 
+                                        className="pl-10 h-10 sm:h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl text-sm sm:text-base" 
                                         value={from}
                                         onChange={(e) => setFrom(e.target.value)}
                                         required
                                         />
                                     </div>
                                 </div>
-                                <div className="space-y-1.5">
-                                    <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Destination</label>
+                                <div className="space-y-1 sm:space-y-1.5 col-span-2 sm:col-span-1">
+                                    <label className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Destination</label>
                                     <div className="relative group/input">
-                                        <MapPin className="absolute left-3 top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
+                                        <MapPin className="absolute left-3 top-2.5 sm:top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
                                         <Input 
                                         placeholder="To Destination" 
-                                        className="pl-10 h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl" 
+                                        className="pl-10 h-10 sm:h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl text-sm sm:text-base" 
                                         value={to}
                                         onChange={(e) => setTo(e.target.value)}
                                         required
@@ -108,26 +108,26 @@ export const ActiveTripCard = () => {
                                     </div>
                                 </div>
 
-                                <div className="space-y-1.5">
-                                    <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Date</label>
+                                <div className="space-y-1 sm:space-y-1.5 col-span-1">
+                                    <label className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Date</label>
                                     <div className="relative group/input">
-                                        <Calendar className="absolute left-3 top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
+                                        <Calendar className="absolute left-3 top-2.5 sm:top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
                                         <Input 
                                             type="date" 
-                                            className="pl-10 h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl cursor-pointer"
+                                            className="pl-10 h-10 sm:h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl cursor-pointer text-sm sm:text-base"
                                             value={date}
                                             onChange={(e) => setDate(e.target.value)}
                                             required
                                         />
                                     </div>
                                 </div>
-                                <div className="space-y-1.5">
-                                    <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Time</label>
+                                <div className="space-y-1 sm:space-y-1.5 col-span-1">
+                                    <label className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider ml-1">Time</label>
                                     <div className="relative group/input">
-                                        <Clock className="absolute left-3 top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
+                                        <Clock className="absolute left-3 top-2.5 sm:top-3 h-5 w-5 text-slate-400 group-focus-within/input:text-blue-600 transition-colors" />
                                         <Input 
                                             type="time" 
-                                            className="pl-10 h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl cursor-pointer"
+                                            className="pl-10 h-10 sm:h-12 bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-blue-500/20 transition-all rounded-xl cursor-pointer text-sm sm:text-base"
                                             value={time}
                                             onChange={(e) => setTime(e.target.value)}
                                             required
@@ -136,7 +136,7 @@ export const ActiveTripCard = () => {
                                 </div>
                             </div>
 
-                            <Button type="submit" className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 rounded-xl transition-all hover:scale-[1.01] active:scale-[0.99] mt-2 text-base" isLoading={loading}>
+                            <Button type="submit" className="w-full h-11 sm:h-12 bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 rounded-xl transition-all hover:scale-[1.01] active:scale-[0.99] mt-2 text-sm sm:text-base" isLoading={loading}>
                                 Start Trip
                             </Button>
                         </form>
