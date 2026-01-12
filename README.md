@@ -2,6 +2,8 @@
 
 A modern, mobile-first React application for car owners to manage drivers, track trips, and monitor their logistics operations. Built with React, Vite, Tailwind CSS, and Supabase.
 
+![SAFAR Dashboard Preview](public/safar-dashboard-preview.png)
+
 ## Features
 
 - **Dashboard**: Overview of active trips and recent activity.
